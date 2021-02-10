@@ -18,8 +18,7 @@ int oddDoubler (int* arr, int len){
     }
     return changed;
 }
-
-  printf("Initialize an array?\n");
+int main(int argc, char const *argv[]) {
  srand(time(NULL));
  int ARRAY[9];
  int i;

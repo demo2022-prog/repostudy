@@ -1,54 +1,38 @@
 #include <stdio.h>
-#include <string.h>
 #include <math.h>
+#include <time.h>
+#include <stdlib.h>
+#define ARRAY_LENGTH 10
+#define NUMBERS_AMOUNY 1000000;
 
-int calculateSquareEquation (int a, int b, int c, float* x1, float* x2) {
-    float D;
-    D = b * b - 4 * a * c;
-    if (a == 0) {
-        *x1 = -c / b;
-        return 0;
+int oddDoubler (int* arr, int len)
+{
+    int i;
+    int changed = 0;
+    for (i = 0; i < len; i++)
+    {
+        if (arr[i] % 2 != 0)
+        {
+            arr[i] *= 2;
+            changed = 1;
+        }
     }
-    else if (D > 0) {
-        *x1 = (-b + sqrt(D)) / (2 * a);
-        *x2 = (-b - sqrt(D)) / (2 * a);
-        return 1;
-    }
-    else if (D == 0) {
-        *x1 = -b / (2 * a);
-        return 0;
-    }
-    else {
-        return -1;
-    }
+    return changed;
 }
 
-int main() {
-    int a, b, c;
-    float x1, x2;
-
-    printf ("This program will calculate a square eqution 'ax2 + bx + c = 0'");
-    printf ("\n Enter a: ");
-    scanf ("%d", &a);
-    printf ("\n Enter b: ");
-    scanf ("%d", &b);
-    printf ("\n Enter c: ");
-    scanf ("%d", &c);
-
-    int result;
-    result = calculateSquareEquation(a, b, c, &x1, &x2);
-    switch (result) {
-    case 0:
-        printf("Equation has a unique root x = %lf", x1);
-        break;
-    case 1:
-        printf("Equation has two roots x1 = %f, x2 = %lf", x1, x2);
-        break;
-    case -1:
-        printf("Equation has no roots");
-        break;
-    default:
-        printf("Exceptional answer: %d", result);
+int main (void)
+{
+    srand(time(NULL));
+    int ARRAY[9];
+    int i;
+    if (oddDoubler(ARRAY, ARRAY_LENGTH))
+    {
+        for (i=0; i<ARRAY_LENGTH; i++)
+            printf("%d ", *(ARRAY + i));
+        printf("\n");
+    }
+    else {
+      printf("0\n");
     }
     return 0;
 }
