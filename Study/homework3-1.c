@@ -32,6 +32,6 @@ int main(int argc, char const *argv[]) {
  double* x1;
  double* x2;
 int d = calcSquareEq(a, b, c, &x1,& x2, d);
- printf("%d", calcSquareEq(a, b, c, &x1,& x2, d));
+ printf("%d", calcSquareEq(a, b, c, &x1, &x2, d));
  return 0;
 }
