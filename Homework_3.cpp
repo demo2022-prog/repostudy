@@ -21,6 +21,7 @@ int main(){
     std::cout << ((num > 21) ? (num - 21) : ((num - 21)*2)) << std::endl;
 
     //exercise 3
+    //change();
     double rt = a1 * (b1+ (c1 / d1));
     std::cout << rt << std::endl; // почему-то выводит ошибку
     // "Исключение в операции с плавающей точкой (стек памяти сброшен на диск)"
@@ -28,5 +29,7 @@ int main(){
 
     //exercise 4
     int cube[3][3][3];
+    int *ptr = &cube[0][0][0];
+    std::cout << *(ptr + 13) << std::endl;
     return 0;
 }
