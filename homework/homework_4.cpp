@@ -1,10 +1,10 @@
 //
 // Created by dmitri on 02.03.2021.
-//
+//Данный код ради эксперимента написан в текстовом редакторе Linux
 #include <iostream>
 #include<cmath>
 int main () {
-	//
+//task 1
 	int a, b, sum;
 	std::cout << "Enter the number a: ";
 	std::cin  >> a;
@@ -16,7 +16,7 @@ int main () {
 	} else {
 		std::cout << "false" << std::endl;
 	}
-
+//task 2
  	int num, i;
 	bool isPrime = 1;
 	std::cout<<"Enter a number: ";
@@ -33,7 +33,7 @@ int main () {
 		std::cout << "This is not a prime number" << std::endl;
 	}
 
-        
+//task 3
         int x, y;
         std::cout << "Enter the number x: ";
         std::cin >> x;
@@ -44,7 +44,7 @@ int main () {
         } else {
         	std::cout << "false" << std::endl;
         }
-        
+//task 4
         int year;
         std::cout << "Enter the year: ";
         std::cin >> year;
